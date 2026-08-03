@@ -7,7 +7,7 @@ on:
     types: started
   workflow_dispatch:
   schedule:
-    - cron: 35 2 * * *
+    - cron: 1 0 * * *
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -22,7 +22,7 @@ jobs:
       - name: 🔨 Setup Node.js environment
         uses: actions/setup-node@main
         with:
-          node-version: 18
+          node-version: 24
           cache: npm
 
       - name: 👾 Check if Debug is true
